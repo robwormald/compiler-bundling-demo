@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Bundle Testing</title>
+</head>
+<body>
+
+	<component-one></component-one>
+	<component-two></component-two>
+
+	<script src="bundles/system.js"></script>
+	<script src="system.config.js"></script>
+	<script src="bundles/Reflect.js"></script>
+	<script src="bundles/zone.min.js"></script>
+	<script src="bundles/loader.js"></script>
+
+	<script src="bundles/components/component-one.js"></script>
+	<script src="bundles/components/component-two.js"></script>
+	<script>
+		Promise.all([
+			System.import('loader'),
+			System.import('components/component-one.ngfactory'),
+			System.import('components/component-two.ngfactory')
+		]).then(function(loads){
+			var loader = loads[0];
+			var compOne = loads[1];
+			var compTwo = loads[2];
+			loader.bootstrap(compOne.ComponentOneNgFactory);
+			loader.bootstrap(compTwo.ComponentTwoNgFactory);
+		})
+	</script>
+</body>
+</html>

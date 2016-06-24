@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "es2015",
+		"lib": ["es6", "dom"],
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"outDir": "dist",
+		"moduleResolution": "node"
+	},
+	"files": [
+		"generated/components/component-one.ngfactory.ts",
+		"generated/components/component-two.ngfactory.ts",
+		"generated/bootstrap-static.ts",
+		"generated/main.ts"
+	]
+}

@@ -1,0 +1,12 @@
+{
+  "firebase": "compiler-bundling-demo",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "node_modules/**",
+	"dist/**",
+	"generated/**",
+	"src/**"
+  ]
+}
