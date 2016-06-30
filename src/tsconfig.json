@@ -5,14 +5,13 @@
 		"lib": ["es6", "dom"],
 		"emitDecoratorMetadata": true,
 		"experimentalDecorators": true,
-		"outDir": "../generated"
+		"outDir": "../generated",
+		"moduleResolution": "node"
 	},
 	"files": [
-		"components/component-one.ts",
-		"components/component-two.ts"
+		"components/app.ts"
 	],
 	"angularCompilerOptions": {
-		"genDir": "../generated",
-		"skipMetadataEmit": true
+		"genDir": "../generated"
 	}
 }

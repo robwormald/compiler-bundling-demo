@@ -9,9 +9,7 @@
 		"moduleResolution": "node"
 	},
 	"files": [
-		"generated/components/component-one.ngfactory.ts",
-		"generated/components/component-two.ngfactory.ts",
-		"generated/bootstrap-static.ts",
+		"generated/components/app.ngfactory.ts",
 		"generated/main.ts"
 	]
 }

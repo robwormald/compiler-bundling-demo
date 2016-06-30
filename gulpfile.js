@@ -98,6 +98,12 @@ function computeBundles(){
 	  .then(componentTree => computeComponentBundles(builder, componentTree));
 }
 
+function bundle(){
+	var builder = new Builder();
+	return builder.loadConfig('system.config.js')
+	  .then(() => builder.buildStatic('app', 'dist/app.js', {minify: true, mangle: true, rollup: true}))
+}
+
 
 
 
@@ -107,4 +113,4 @@ gulp.task('compile', ['precompile'], compile);
 gulp.task('copy:src', ['clean'], copy_src);
 gulp.task('copy:deps', copy_deps);
 gulp.task('clean', clean);
-gulp.task('bundle', ['compile', 'copy:deps'], computeBundles)
+gulp.task('bundle', ['compile', 'copy:deps'], bundle)
